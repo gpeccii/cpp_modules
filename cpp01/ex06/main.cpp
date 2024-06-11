@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv) {
 	if (argc != 2) {
-		std::cerr << "TOO MANY ARGUMENTS" << std::endl;
+		std::cerr << "BAD ARGUMENTS" << std::endl;
 		return 1;
 	}
 
