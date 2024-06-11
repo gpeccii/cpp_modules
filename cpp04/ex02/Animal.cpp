@@ -2,6 +2,7 @@
 
 AAnimal::AAnimal() {
 	this->type = "Animal";
+	std::cout<<"AAnimal created"<<std::endl;
 }
 
 AAnimal::AAnimal(const AAnimal &toCopy) {
@@ -27,4 +28,3 @@ void AAnimal::makeSound() const {
 std::string AAnimal::getType() const {
 	return this->type;
 }
-

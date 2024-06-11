@@ -2,6 +2,8 @@
 
 Cat::Cat() {
 	this->type = "Cat";
+	std::cout << "Cat created." << std::endl;
+
 }
 
 Cat::Cat(const Cat &toCopy) : Animal(toCopy) {

@@ -2,6 +2,7 @@
 
 WrongCat::WrongCat() {
 	this->type = "WrongCat";
+	std::cout << "WrongCat created." << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat &toCopy) : WrongAnimal(toCopy) {
@@ -22,5 +23,5 @@ WrongCat::~WrongCat() {
 }
 
 void WrongCat::makeSound() const {
-	std::cout << "Roar Roar" << std::endl;  // Usa il suono di WrongAnimal
+	std::cout << "WrongCat makes a specific sound." << std::endl;  // Usa il suono di WrongAnimal
 }

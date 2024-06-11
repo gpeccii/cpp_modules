@@ -2,6 +2,7 @@
 
 WrongAnimal::WrongAnimal() {
 	this->type = "WrongAnimal";
+	std::cout << "WrongAnimal created." << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &toCopy) {

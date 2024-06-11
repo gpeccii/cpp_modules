@@ -2,6 +2,7 @@
 
 Dog::Dog() {
 	this->type = "Dog";
+	std::cout << "Dog created." << std::endl;
 }
 
 Dog::Dog(const Dog &toCopy) : Animal(toCopy) {

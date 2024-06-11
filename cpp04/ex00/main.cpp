@@ -4,26 +4,49 @@
 #include "WrongCat.hpp"
 #include "WrongAnimal.hpp"
 
-int main() {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound! j->makeSound();
-	meta->makeSound();
+int main()
+{
+	std::cout << "===  GOOD ANIMALS  ===\n" << std::endl;
 
-	const WrongAnimal* meta2 = new WrongAnimal();
-	const WrongAnimal* z= new WrongCat();
-	std::cout << z->getType() << " " << std::endl;
-	z->makeSound(); //will output the cat sound! j->makeSound();
-	meta2->makeSound();
+	Animal *animal = new Animal();
+	Animal *dog = new Dog();
+	Animal *cat = new Cat();
 
-	delete meta;
-	delete i;
-	delete j;
-	delete meta2;
-	delete z;
+	std::cout << std::endl;
 
-	return 0;
+	std::cout << animal->getType() << std::endl;
+	std::cout << dog->getType() << std::endl;
+	std::cout << cat->getType() << std::endl;
+
+	std::cout << std::endl;
+
+	animal->makeSound();
+	dog->makeSound();
+	cat->makeSound();
+
+	std::cout << std::endl;
+
+	delete animal;
+	delete dog;
+	delete cat;
+
+	std::cout << "\n=== WRONG ANIMALS ===\n" << std::endl;
+
+	WrongAnimal *wAnimal = new WrongAnimal();
+	WrongAnimal *wCat = new WrongCat();
+
+	std::cout << std::endl;
+
+	std::cout << wAnimal->getType() << std::endl;
+	std::cout << wCat->getType() << std::endl;
+
+	std::cout << std::endl;
+
+	wAnimal->makeSound();
+	wCat->makeSound();
+
+	std::cout << std::endl;
+
+	delete wAnimal;
+	delete wCat;
 }

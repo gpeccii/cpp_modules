@@ -17,14 +17,17 @@ int main()
 		animalArray[i] = new Cat();
 	}
 
-	Dog basic; {
+	Dog basic;
+	{
+		basic.getBrain()->setIdea(0, "Old idea");
 		Dog tmp = basic;
-		tmp.getBrain()->setIdea(0, "Modified Idea");
-		std::cout<<"Idea of tmp: "<<tmp.getBrain()->getIdea(0)<<std::endl;
+		// Modifica l'idea del cervello di tmp
+		tmp.getBrain()->setIdea(0, "New idea");
+		std::cout << "Tmp brain idea: " << tmp.getBrain()->getIdea(0) << std::endl;
 	}
+	// Stampa l'idea del cervello di basic
+	std::cout << "Basic brain idea: " << basic.getBrain()->getIdea(0) << std::endl;
 
-	// Stampa il contenuto dell'idea dell'oggetto basic per verificare la deep copy
-	std::cout << "Idea of basic: " << dynamic_cast<Dog *>(animalArray[0])->getBrain()->getIdea(0) <<std::endl<<std::endl;
 
 	std::cout<<"Delete of Animal\n"<<std::endl;
 	for (int i = 0; i < arraySize; i++)

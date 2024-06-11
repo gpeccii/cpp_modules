@@ -11,7 +11,7 @@ public:
 	Dog();
 	Dog(const Dog &toCopy);
 	Dog& operator=(const Dog &toCopy);
-	virtual ~Dog();  // Distruttore virtuale
+	~Dog();  // Distruttore virtuale
 	void makeSound() const;  // Metodo sovrascritto
 	std::string getType() const;  // Metodo sovrascritto
 };

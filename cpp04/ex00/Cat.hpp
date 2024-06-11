@@ -11,7 +11,7 @@ public:
 	Cat();
 	Cat(const Cat &toCopy);
 	Cat& operator=(const Cat &toCopy);
-	virtual ~Cat();  // Distruttore virtuale
+	~Cat();
 	void makeSound() const;  // Metodo sovrascritto
 	std::string getType() const;  // Metodo sovrascritto
 };
